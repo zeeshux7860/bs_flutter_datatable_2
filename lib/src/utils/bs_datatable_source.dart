@@ -1,12 +1,9 @@
 import 'dart:convert';
 
-import 'package:bs_flutter_datatable/bs_flutter_datatable.dart';
+import 'package:bs_flutter_datatable_2/bs_flutter_datatable.dart';
 
 abstract class BsDatatableSource {
-  BsDatatableSource(
-      {List<Map<String, dynamic>>? data,
-      BsDatatableResponse? response,
-      BsDatatableController? controller}) {
+  BsDatatableSource({List<Map<String, dynamic>>? data, BsDatatableResponse? response, BsDatatableController? controller}) {
     if (data != null) _data = data;
 
     if (response == null) response = BsDatatableResponse(data: List.from([]));
@@ -20,14 +17,12 @@ abstract class BsDatatableSource {
     _controller = controller;
   }
 
-  List<Map<String, dynamic>> _data =
-      List<Map<String, dynamic>>.empty(growable: true);
+  List<Map<String, dynamic>> _data = List<Map<String, dynamic>>.empty(growable: true);
   List<String> _responseData = List<String>.empty(growable: true);
   List<String> _deletedData = List<String>.empty(growable: true);
 
   /// Variable to handle response from jQuery datatable.net
-  BsDatatableResponse _response =
-      BsDatatableResponse(data: List.empty(growable: true));
+  BsDatatableResponse _response = BsDatatableResponse(data: List.empty(growable: true));
 
   /// Variable to save datatable config
   BsDatatableController _controller = BsDatatableController();
@@ -106,8 +101,7 @@ abstract class BsDatatableSource {
     controller.reload(clearData: false);
   }
 
-  void reload(
-      {bool clear = false, List<Map<String, dynamic>> data = const []}) {
+  void reload({bool clear = false, List<Map<String, dynamic>> data = const []}) {
     if (clear) {
       _data.clear();
       _responseData.clear();
@@ -147,14 +141,10 @@ abstract class BsDatatableSource {
       return matched;
     }).toList();
 
-    List<Map<String, dynamic>> currentData = currentDataFiltered
-        .skip(controller.start)
-        .take(controller.length)
-        .toList();
+    List<Map<String, dynamic>> currentData = currentDataFiltered.skip(controller.start).take(controller.length).toList();
     _response = BsDatatableResponse(
         data: clear ? response.data : currentData,
         countData: clear ? response.countData : _data.length,
-        countFiltered:
-            clear ? response.countFiltered : currentDataFiltered.length);
+        countFiltered: clear ? response.countFiltered : currentDataFiltered.length);
   }
 }

@@ -17,7 +17,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
-  bs_flutter_datatable:
+  bs_flutter_datatable_2:
     dependency: "direct main"
     description:
       path: ".."

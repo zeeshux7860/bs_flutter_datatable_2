@@ -1,4 +1,4 @@
-import 'package:bs_flutter_datatable/bs_flutter_datatable.dart';
+import 'package:bs_flutter_datatable_2/bs_flutter_datatable.dart';
 
 class BsPagination {
   static const List<BsPaginationButtons> buttons = [

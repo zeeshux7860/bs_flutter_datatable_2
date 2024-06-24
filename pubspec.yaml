@@ -1,7 +1,7 @@
-name: bs_flutter_datatable
+name: bs_flutter_datatable_2
 description: Simple way to show data using jQuery datatables.net response
 version: 1.2.5
-homepage: https://github.com/kholifanalfon/bs_flutter_datatable.git
+homepage: https://github.com/zeeshux7860/bs_flutter_datatable_2.git
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

@@ -1,4 +1,5 @@
-import 'package:bs_flutter_datatable/bs_flutter_datatable.dart';
+import 'package:bs_flutter_datatable_2/bs_flutter_datatable.dart';
+
 import 'package:flutter/material.dart';
 
 enum BsPaginationButtons { firstPage, previous, button, input, next, lastPage }

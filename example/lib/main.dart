@@ -1,6 +1,6 @@
 import 'dart:convert';
+import 'package:bs_flutter_datatable_2/bs_flutter_datatable.dart';
 
-import 'package:bs_flutter_datatable/bs_flutter_datatable.dart';
 import 'package:bs_flutter_datatable_example/source.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
